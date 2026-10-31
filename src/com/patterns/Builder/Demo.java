@@ -25,6 +25,19 @@ public class Demo {
         Vehicle firstBike = bikeBuilder.getVehicle();
         //System.out.println(firstBike.toString());
 
+        Carbuilder newCarBuilder = new Carbuilder();
+        VehicleAssembler assembler = new VehicleAssembler(newCarBuilder);
+        System.out.println("------------------car assesmbler----------------------");
+        assembler.assemble();
+        Vehicle cCar =  builder.getVehicle();
+
+        System.out.println("------------------bike assesmbler----------------------");
+
+        BikeBuilder newBikeBuilder = new BikeBuilder();
+        VehicleAssembler newBikeAssembler =  new VehicleAssembler(newBikeBuilder);
+        newBikeAssembler.assemble();
+        Vehicle eBike = newBikeBuilder.getVehicle();
+
 
     }
 }
