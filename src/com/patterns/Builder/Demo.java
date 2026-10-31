@@ -17,6 +17,7 @@ public class Demo {
         newBikeAssembler.assemble();
         Vehicle eBike = newBikeBuilder.getVehicle();
 
-
+        System.out.println(cCar);
+        System.out.println(eBike);
     }
 }
