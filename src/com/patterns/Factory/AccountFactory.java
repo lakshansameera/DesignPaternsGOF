@@ -2,26 +2,24 @@ package com.patterns.Factory;
 
 public class AccountFactory {
 
-    public Account createAccount(String type)  throws Exception{
-
-        if(type.equals(null)){
-            return new Exception("NUll");
+    public Account createAccount(String type)  {
+        if (type == null){
+            throw new IllegalArgumentException("AccountCreator Type Can not be NUll");
         }
 
-        else if (type.equals("SAVINGS")){
+        if (type.equals("SAVINGS")){
             return new SavingsAccount();
-        } else if (type.equals("TERMDEPOSIT")) {
+        } else if (type.equals("TERMDEPOSIT")  || type.equals("FIXED"))  {
             return new TermDepositAccount();
         }
         else if (type.equals("CURRENT")){
             return new CurrentAccount();
         }
-
-        else if(type.equals("STUDENT")){
+        else if (type.equals("STUDENT")){
             return new Student();
         }
         else {
-            throw new IllegalArgumentException("Invalid Account Type Selected");
+            throw new IllegalArgumentException("Invalid AccountCreator Type " + type);
         }
 
     }
