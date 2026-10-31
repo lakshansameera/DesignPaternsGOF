@@ -16,5 +16,15 @@ public class Demo {
         builder.buildEngine();
         Vehicle secondCar = builder.getVehicle();
         System.out.println(secondCar.toString());
+
+        System.out.println("----------------------------------------");
+        BikeBuilder bikeBuilder = new BikeBuilder();
+        bikeBuilder.buildChassis();
+        bikeBuilder.buildEngine();
+        bikeBuilder.buildTyres();
+        Vehicle firstBike = bikeBuilder.getVehicle();
+        //System.out.println(firstBike.toString());
+
+
     }
 }
