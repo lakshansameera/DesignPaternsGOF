@@ -21,11 +21,11 @@ public class BikeBuilder implements VehicleBuilder{
 
     @Override
     public void buildOuterFramework() {
-
+        System.out.println("Build outer framework");
     }
 
     @Override
     public Vehicle getVehicle() {
-        return null;
+        return vehicle;
     }
 }
